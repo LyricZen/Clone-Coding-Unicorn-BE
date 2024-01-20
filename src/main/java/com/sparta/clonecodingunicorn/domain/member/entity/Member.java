@@ -48,7 +48,6 @@ public class Member {
         this.memberId = memberId;
         this.email = email;
         this.password = password;
-        this.passwordConfirm = passwordConfirm;
         this.name = name;
         this.birthYear = birthYear;
         this.gender = gender;
