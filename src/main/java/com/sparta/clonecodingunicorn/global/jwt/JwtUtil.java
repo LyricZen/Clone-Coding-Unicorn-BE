@@ -68,10 +68,10 @@ public class JwtUtil {
     public String getTokenFromHeader(HttpServletRequest req) {
         String authorizationHeader = req.getHeader("Authorization");
 
-        if (StringUtils.hasText(authorizationHeader) && authorizationHeader.startsWith("Bearer ")) {
-            return authorizationHeader.substring(7);
-        }
-        return null;
+//        if (StringUtils.hasText(authorizationHeader) && authorizationHeader.startsWith("Bearer ")) {
+//            return authorizationHeader.substring(7);
+//        }
+        return authorizationHeader;
     }
     // 토큰 검증
     public boolean validateToken(String token) {
