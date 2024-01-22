@@ -1,7 +1,6 @@
 package com.sparta.clonecodingunicorn.domain.member.controller;
 
 import com.sparta.clonecodingunicorn.domain.member.dto.SignupRequestDto;
-import com.sparta.clonecodingunicorn.domain.member.dto.SignupResponseDto;
 import com.sparta.clonecodingunicorn.domain.member.service.MemberService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
