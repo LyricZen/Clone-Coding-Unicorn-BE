@@ -16,8 +16,8 @@ public class CorsConfig {
         config.setAllowCredentials(true);
 
         // 허용할 오리진을 설정
-//        config.addAllowedOrigin("http://localhost:3001");
-//        config.addAllowedOrigin("http://localhost:3000");
+        config.addAllowedOrigin("http://localhost:3001");
+        config.addAllowedOrigin("http://localhost:3000");
 //        config.addAllowedOrigin("https://house-frontend-7y3ahqo25-torongs-projects.vercel.app");
 //        config.addAllowedOrigin("https://www.searcheshouse.net");
         config.addAllowedHeader("*");
