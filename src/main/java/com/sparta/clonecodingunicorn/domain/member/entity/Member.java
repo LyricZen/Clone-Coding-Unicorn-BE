@@ -1,6 +1,8 @@
 package com.sparta.clonecodingunicorn.domain.member.entity;
 
+import com.sparta.clonecodingunicorn.domain.member.dto.SignupRequestDto;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -20,14 +22,12 @@ public class Member {
     private String password;
 
     @Column
-    private String passwordConfirm;
-
-    @Column
     private String name;
 
     @Column
     private Integer birthYear;
 
+    @Column
     private String gender;
 
     @Column
@@ -42,11 +42,12 @@ public class Member {
     @Column
     private Boolean subscribeAgree;
 
-    public Member(Long memberId, String email, String password, String passwordConfirm, String name, Integer birthYear, String gender, String job, String interestArea, Boolean deleteMember, Boolean subscribeAgree) {
+
+    @Builder
+    public Member(Long memberId, String email, String password, String name, Integer birthYear, String gender, String job, String interestArea, Boolean deleteMember, Boolean subscribeAgree) {
         this.memberId = memberId;
         this.email = email;
         this.password = password;
-        this.passwordConfirm = passwordConfirm;
         this.name = name;
         this.birthYear = birthYear;
         this.gender = gender;
@@ -54,5 +55,11 @@ public class Member {
         this.interestArea = interestArea;
         this.deleteMember = deleteMember;
         this.subscribeAgree = subscribeAgree;
+    }
+
+    public Member(String email, String encryptedPassword, String name) {
+        this.email = email;
+        this.password = encryptedPassword;
+        this.name = name;
     }
 }
